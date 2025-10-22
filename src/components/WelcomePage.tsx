@@ -36,8 +36,15 @@ export default function WelcomePage({ onStart }: WelcomePageProps) {
     <QuestionPage
       title={
         <>
+          <div className="mb-8">
+            <img
+              src="https://www.somosvalor.com.br/assets/logo_horizontal_branco-BnwOCCrv.svg"
+              alt="Somos Valor"
+              className="h-12 md:h-16 mx-auto"
+            />
+          </div>
           <span className="font-normal">
-            5 minutos de Auditoria de {" "}
+            Descubra qual solução financeira realmente faz {" "}
             <span
               className="inline-block mx-2 font-cormorant italic text-[1.2em] bg-gradient-to-b from-yellow-300 via-yellow-400 to-amber-500 bg-clip-text text-transparent"
               style={{
@@ -46,16 +53,9 @@ export default function WelcomePage({ onStart }: WelcomePageProps) {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Growth
+              sentido
             </span>{" "}
-          </span>
-          <br />
-          <span className="text-[0.9em] font-normal">
-            Que vê o que funciona, o que falha
-          </span>
-          <br />
-          <span className="text-[0.9em] font-normal">
-           E o que fazer a seguir
+            pro seu negócio.
           </span>
         </>
       }
