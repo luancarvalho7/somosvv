@@ -56,8 +56,8 @@ export default function ThankYouPage({ onBack }: ThankYouPageProps) {
           
           <div className="space-y-3 text-left">
             <div className="flex items-start gap-3">
-              <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span className="text-purple-400 text-sm font-bold">1</span>
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{backgroundColor: 'rgba(2, 45, 33, 0.2)'}}>
+                <span className="text-sm font-bold" style={{color: '#05664D'}}>1</span>
               </div>
               <p className="text-gray-300 text-base">
                 Analisaremos os seus resultados em detalhe
@@ -65,8 +65,8 @@ export default function ThankYouPage({ onBack }: ThankYouPageProps) {
             </div>
             
             <div className="flex items-start gap-3">
-              <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span className="text-purple-400 text-sm font-bold">2</span>
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{backgroundColor: 'rgba(2, 45, 33, 0.2)'}}>
+                <span className="text-sm font-bold" style={{color: '#05664D'}}>2</span>
               </div>
               <p className="text-gray-300 text-base">
                 Prepararemos recomendações personalizadas para o seu negócio
@@ -74,8 +74,8 @@ export default function ThankYouPage({ onBack }: ThankYouPageProps) {
             </div>
             
             <div className="flex items-start gap-3">
-              <div className="w-6 h-6 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                <span className="text-purple-400 text-sm font-bold">3</span>
+              <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style={{backgroundColor: 'rgba(2, 45, 33, 0.2)'}}>
+                <span className="text-sm font-bold" style={{color: '#05664D'}}>3</span>
               </div>
               <p className="text-gray-300 text-base">
                 Entraremos em contato nas próximas 24-48 horas

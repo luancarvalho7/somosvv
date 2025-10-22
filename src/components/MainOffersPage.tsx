@@ -231,7 +231,7 @@ export default function MainOffersPage({ onBack, onContinue }: MainOffersPagePro
                         <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
                           <div className="text-left flex-1">
                             <div className="flex items-start gap-2 sm:gap-3 mb-2 sm:mb-3">
-                              <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full mt-1.5 sm:mt-2 flex-shrink-0" style={{backgroundImage: 'linear-gradient(to right, rgb(96, 165, 250), #022D21)'}}></div>
                               <h3 className="text-lg sm:text-2xl font-bold text-white leading-tight">{offer.name}</h3>
                             </div>
                             <p className="text-gray-300 leading-relaxed text-sm sm:text-lg ml-4 sm:ml-6">{offer.description}</p>

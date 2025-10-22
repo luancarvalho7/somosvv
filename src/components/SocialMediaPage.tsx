@@ -208,11 +208,15 @@ export default function SocialMediaPage({ onBack, onContinue }: SocialMediaPageP
               {socialMedia.length > 0 && (
                 <div className="space-y-4">
                   {socialMedia.map((account, index) => (
-                    <div key={index} className={`${
-                      isInstagram(account.platformName) 
-                        ? 'bg-gradient-to-r from-pink-900/30 to-purple-900/30 border-pink-500/50 shadow-pink-500/20' 
-                        : 'bg-gradient-to-r from-gray-900 to-gray-800 border-gray-600 shadow-gray-500/20'
-                    } border rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-200 hover:border-opacity-80`}>
+                    <div
+                      key={index}
+                      className={`${
+                        isInstagram(account.platformName)
+                          ? 'border-pink-500/50 shadow-pink-500/20'
+                          : 'bg-gradient-to-r from-gray-900 to-gray-800 border-gray-600 shadow-gray-500/20'
+                      } border rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-200 hover:border-opacity-80`}
+                      style={isInstagram(account.platformName) ? {backgroundImage: 'linear-gradient(to right, rgba(131, 24, 67, 0.3), rgba(2, 45, 33, 0.3))'} : undefined}
+                    >
                       {editingIndex === index ? (
                         <div className="space-y-4">
                           <div className="grid grid-cols-1 gap-3">
@@ -255,7 +259,7 @@ export default function SocialMediaPage({ onBack, onContinue }: SocialMediaPageP
                               <span className="text-2xl">{getPlatformEmoji(account.platformName)}</span>
                               {account.platformName}
                               {isInstagram(account.platformName) && (
-                                <span className="text-xs bg-gradient-to-r from-pink-500 to-purple-500 text-white px-2 py-1 rounded-full font-medium">
+                                <span className="text-xs text-white px-2 py-1 rounded-full font-medium" style={{backgroundImage: 'linear-gradient(to right, rgb(236, 72, 153), #022D21)'}}>
                                   DESTAQUE
                                 </span>
                               )}

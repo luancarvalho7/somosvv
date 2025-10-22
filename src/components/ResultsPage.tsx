@@ -249,7 +249,7 @@ export default function ResultsPage({ results, onContinue }: ResultsPageProps) {
         <div className="max-w-6xl mx-auto px-4 md:px-6">
           <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="inline-flex items-center gap-2 bg-gray-900/80 border border-gray-700 rounded-full px-6 py-3 mb-8">
-              <Zap className="w-4 h-4 text-purple-400" />
+              <Zap className="w-4 h-4" style={{color: '#05664D'}} />
               <span className="text-gray-300 font-medium text-sm">Auditoria Completa de Crescimento IA</span>
             </div>
             
@@ -497,7 +497,7 @@ export default function ResultsPage({ results, onContinue }: ResultsPageProps) {
                       </svg>
                     </div>
                     <div className="text-center">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center mb-2">
+                      <div className="w-12 h-12 rounded-full flex items-center justify-center mb-2" style={{backgroundImage: 'linear-gradient(to right, rgba(2, 45, 33, 0.2), rgba(59, 130, 246, 0.2))'}}>
                         <ArrowRight className="w-6 h-6 text-gray-400" />
                       </div>
                       <span className="text-sm text-gray-500 font-medium">Caminho para o Crescimento</span>
@@ -537,7 +537,7 @@ export default function ResultsPage({ results, onContinue }: ResultsPageProps) {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`} style={{ transitionDelay: '1400ms' }}>
             <div className="mb-4 md:mb-6">
-              <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6" style={{backgroundImage: 'linear-gradient(to right, #022D21, rgb(236, 72, 153))'}}>
                 <Calendar className="w-6 h-6 md:w-8 md:h-8 text-white" />
               </div>
               <h2 className="text-xl md:text-4xl lg:text-5xl font-semibold text-white mb-3 md:mb-6 font-outfit leading-tight px-1 md:px-2">
@@ -551,9 +551,19 @@ export default function ResultsPage({ results, onContinue }: ResultsPageProps) {
             <button
               onClick={handleCTAClick}
               disabled={isSubmitting}
-              className={`inline-flex items-center gap-2 md:gap-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 md:py-5 px-5 md:px-10 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-purple-500/25 font-outfit ${
+              className={`inline-flex items-center gap-2 md:gap-3 text-white font-semibold py-3 md:py-5 px-5 md:px-10 rounded-full text-base md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl font-outfit ${
                 isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
               }`}
+              style={{
+                backgroundImage: 'linear-gradient(to right, #022D21, rgb(219, 39, 119))',
+                boxShadow: '0 0 50px rgba(2, 45, 33, 0.25)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundImage = 'linear-gradient(to right, #011f17, rgb(190, 24, 93))';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundImage = 'linear-gradient(to right, #022D21, rgb(219, 39, 119))';
+              }}
             >
               <Calendar className="w-5 h-5 md:w-6 md:h-6" />
               <span>{isSubmitting ? 'Enviando...' : 'Quero receber meu diagnóstico completo'}</span>

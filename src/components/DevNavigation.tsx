@@ -97,9 +97,12 @@ export default function DevNavigation({ currentStep, totalSteps, onStepChange }:
           
           {/* Progress Bar */}
           <div className="mt-2 w-full bg-gray-700 rounded-full h-1">
-            <div 
-              className="h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-300"
-              style={{ width: `${((currentStep + 1) / 16) * 100}%` }}
+            <div
+              className="h-1 rounded-full transition-all duration-300"
+              style={{
+                backgroundImage: 'linear-gradient(to right, #022D21, rgb(236, 72, 153))',
+                width: `${((currentStep + 1) / 16) * 100}%`
+              }}
             />
           </div>
         </div>
