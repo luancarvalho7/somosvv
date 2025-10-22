@@ -3,11 +3,11 @@ import { getAllURLParams } from '../utils/urlParams';
 import { getAuditId } from '../utils/localStorage';
 
 export const API_ENDPOINTS = {
-  ANALYZE_WEBSITE: 'aiGrowth/analyzeWebsite',
-  DEEP_QUESTIONS: 'aiGrowth/deepQuestions',
-  FINISH_AUDIT: 'aiGrowth/finishAudit',
-  START_AUDIT: 'aiGrowth/startAudit',
-  BOLT: 'aiGrowth/bolt'
+  ANALYZE_WEBSITE: 'somosv/analyzeWebsite',
+  DEEP_QUESTIONS: 'somosv/deepQuestions',
+  FINISH_AUDIT: 'somosv/finishAudit',
+  START_AUDIT: 'somosv/startAudit',
+  BOLT: 'somosv/bolt'
 };
 
 export interface CompanyData {
