@@ -16,12 +16,7 @@ const stepNames = [
   'Nome da Empresa',
   'Descrição da Empresa',
   'Receita Mensal',
-  'Número de Funcionários',
   'Nicho',
-  'Canais de Aquisição',
-  'Redes Sociais',
-  'Ofertas Principais',
-  'Objetivo de Crescimento',
   'Perguntas Profundas',
   'Resultados',
   'Obrigado'
@@ -74,7 +69,7 @@ export default function DevNavigation({ currentStep, totalSteps, onStepChange }:
               </button>
               
               <button
-                onClick={() => onStepChange(15)}
+                onClick={() => onStepChange(10)}
                 className="p-1 text-gray-400 hover:text-white transition-colors"
                 title="Ir para Resultados"
               >
@@ -101,7 +96,7 @@ export default function DevNavigation({ currentStep, totalSteps, onStepChange }:
               className="h-1 rounded-full transition-all duration-300"
               style={{
                 backgroundImage: 'linear-gradient(to right, #022D21, rgb(236, 72, 153))',
-                width: `${((currentStep + 1) / 16) * 100}%`
+                width: `${((currentStep + 1) / totalSteps) * 100}%`
               }}
             />
           </div>

@@ -7,12 +7,7 @@ import NamePage from './components/NamePage';
 import CompanyNamePage from './components/CompanyNamePage';
 import CompanyDescriptionPage from './components/CompanyDescriptionPage';
 import MonthlyRevenuePage from './components/MonthlyRevenuePage';
-import EmployeeCountPage from './components/EmployeeCountPage';
 import NichePage from './components/NichePage';
-import AcquisitionChannelsPage from './components/AcquisitionChannelsPage';
-import SocialMediaPage from './components/SocialMediaPage';
-import MainOffersPage from './components/MainOffersPage';
-import GrowthGoalPage from './components/GrowthGoalPage';
 import DeepQuestionsPage from './components/DeepQuestionsPage';
 import ResultsPage from './components/ResultsPage';
 import ThankYouPage from './components/ThankYouPage';
@@ -33,7 +28,7 @@ export default function App() {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<FormData>({});
   const [auditResults, setAuditResults] = useState<any>(null);
-  const totalSteps = 16; // Welcome, Website URL, Email, Phone Number, Name, Company Name, Company Description, Monthly Revenue, Employee Count, Niche, Acquisition Channels, Social Media, Main Offers, Growth Goal, Deep Questions, Results, Thank You
+  const totalSteps = 11; // Welcome, Website URL, Email, Phone Number, Name, Company Name, Company Description, Monthly Revenue, Niche, Deep Questions, Results, Thank You
 
   // Save URL parameters on app load
   React.useEffect(() => {
@@ -125,56 +120,21 @@ export default function App() {
         );
       case 8:
         return (
-          <EmployeeCountPage
+          <NichePage
             onBack={handleBack}
             onContinue={() => handleNext({})}
           />
         );
       case 9:
         return (
-          <NichePage
-            onBack={handleBack}
-            onContinue={() => handleNext({})}
-          />
-        );
-      case 10:
-        return (
-          <AcquisitionChannelsPage
-            onBack={handleBack}
-            onContinue={() => handleNext({})}
-          />
-        );
-      case 11:
-        return (
-          <SocialMediaPage
-            onBack={handleBack}
-            onContinue={() => handleNext({})}
-          />
-        );
-      case 12:
-        return (
-          <MainOffersPage
-            onBack={handleBack}
-            onContinue={() => handleNext({})}
-          />
-        );
-      case 13:
-        return (
-          <GrowthGoalPage
-            onBack={handleBack}
-            onContinue={() => handleNext({})}
-          />
-        );
-      case 14:
-        return (
           <DeepQuestionsPage
             onBack={handleBack}
             onContinue={handleFinishAudit}
           />
         );
-      case 15:
+      case 10:
         return <ResultsPage results={auditResults} onContinue={() => handleNext({})} />;
-      case 16:
+      case 11:
         return <ThankYouPage onBack={handleBack} />;
       default:
         return (
