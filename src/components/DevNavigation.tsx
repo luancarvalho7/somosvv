@@ -17,6 +17,7 @@ const stepNames = [
   'Descrição da Empresa',
   'Receita Mensal',
   'Nicho',
+  'Função do Usuário',
   'Perguntas Profundas',
   'Resultados',
   'Obrigado'
@@ -69,7 +70,7 @@ export default function DevNavigation({ currentStep, totalSteps, onStepChange }:
               </button>
               
               <button
-                onClick={() => onStepChange(10)}
+                onClick={() => onStepChange(11)}
                 className="p-1 text-gray-400 hover:text-white transition-colors"
                 title="Ir para Resultados"
               >

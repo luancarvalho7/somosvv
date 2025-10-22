@@ -8,6 +8,7 @@ import CompanyNamePage from './components/CompanyNamePage';
 import CompanyDescriptionPage from './components/CompanyDescriptionPage';
 import MonthlyRevenuePage from './components/MonthlyRevenuePage';
 import NichePage from './components/NichePage';
+import UserRolePage from './components/UserRolePage';
 import DeepQuestionsPage from './components/DeepQuestionsPage';
 import ResultsPage from './components/ResultsPage';
 import ThankYouPage from './components/ThankYouPage';
@@ -28,7 +29,7 @@ export default function App() {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<FormData>({});
   const [auditResults, setAuditResults] = useState<any>(null);
-  const totalSteps = 11; // Welcome, Website URL, Email, Phone Number, Name, Company Name, Company Description, Monthly Revenue, Niche, Deep Questions, Results, Thank You
+  const totalSteps = 12; // Welcome, Website URL, Email, Phone Number, Name, Company Name, Company Description, Monthly Revenue, Niche, User Role, Deep Questions, Results, Thank You
 
   // Save URL parameters on app load
   React.useEffect(() => {
@@ -127,14 +128,21 @@ export default function App() {
         );
       case 9:
         return (
+          <UserRolePage
+            onBack={handleBack}
+            onContinue={() => handleNext({})}
+          />
+        );
+      case 10:
+        return (
           <DeepQuestionsPage
             onBack={handleBack}
             onContinue={handleFinishAudit}
           />
         );
-      case 10:
-        return <ResultsPage results={auditResults} onContinue={() => handleNext({})} />;
       case 11:
+        return <ResultsPage results={auditResults} onContinue={() => handleNext({})} />;
+      case 12:
         return <ThankYouPage onBack={handleBack} />;
       default:
         return (
